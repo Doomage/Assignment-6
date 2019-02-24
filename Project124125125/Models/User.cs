@@ -17,14 +17,14 @@ namespace Project124125125.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage ="Role Required !")]
-         public string Roles { get; set; }
+         public Roles Role { get; set; }
     }
 
-    //public enum Roles
-    //{
-    //    Architect,
-    //    Analyst,
-    //    Programmer,
-    //    Tester,
-    //}
+    public enum Roles
+    {
+        Architect,
+        Analyst,
+        Programmer,
+        Tester,
+    }
 }
