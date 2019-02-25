@@ -26,5 +26,6 @@ namespace Project124125125.Models
         Analyst,
         Programmer,
         Tester,
+        Manager
     }
 }
