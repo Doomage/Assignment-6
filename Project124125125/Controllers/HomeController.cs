@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project124125125.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,13 @@ namespace Project124125125.Controllers
     {
         public ActionResult Index()
         {
+            User loggedUser = Session["user"] as User;
+            return View(loggedUser);
+        }
+        public ActionResult Complete()
+        {
+            User loggedUser = Session["user"] as User;
+            loggedUser.Role += 1;
             return View();
         }
 

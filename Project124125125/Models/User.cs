@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project124125125.Models
 {
@@ -18,12 +19,15 @@ namespace Project124125125.Models
 
         [Required(ErrorMessage ="Role Required !")]
          public Roles Role { get; set; }
+
+
+        public IEnumerable<Document> Documents { get; set; }
     }
 
     public enum Roles
     {
-        Architect,
         Analyst,
+        Architect,
         Programmer,
         Tester,
         Manager

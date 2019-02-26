@@ -14,7 +14,7 @@ namespace Project124125125.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Username = c.String(nullable: false),
                         Password = c.String(nullable: false),
-                        Roles = c.Int(nullable: false),
+                        Role = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
