@@ -17,6 +17,7 @@ namespace Project124125125.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult Login(string Username,string Password)
         {
             UserManager manager = new UserManager();

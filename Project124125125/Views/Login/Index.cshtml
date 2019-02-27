@@ -3,47 +3,16 @@
     ViewBag.Title = "Login";
 }
 <br /><br />
-
-@using (Html.BeginForm("Login", "Login"))
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>Login</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger text-center" })
-            <div class="form-group">
-                @Html.LabelFor(model=>model.Username,htmlAttributes: new { @class = "control-lavel col-mid-2"})
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control single-line" } })
-                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Login" class="btn btn-secondary" />
-                </div>
-            </div>
-        </div>
-    }
 <div class="text-center">
     <form class="form-horizontal" action="/Login/Login" method="post">
 
         <img class="mb-4" src="https://www.afdemp.org/wp-content/uploads/2017/03/AFDEmp.png" alt="Project 4" width="100" height="100">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <input type="text" id="Username" class="form-control" style="margin-left:auto;margin-right:auto;" placeholder="Username" required="" autofocus="" data-val="true">
-        <input type="password" id="Password" class="form-control" style="margin-left:auto;margin-right:auto;" placeholder="Password" required=""><br />
-        <input class="btn btn-lg btn-dark btn-lg" type="submit" value="Sign in"  onclick="location.href='@Url.Action("Login", "Login")">
+        <input type="text" id="Username"name="Username" class="form-control" style="margin-left:auto;margin-right:auto;" placeholder="Username" required="" autofocus="" data-val="true">
+        <input type="password" id="Password"name="Password" class="form-control" style="margin-left:auto;margin-right:auto;" placeholder="Password" required=""><br />
+        <input class="btn btn-lg btn-dark btn-lg" type="submit" value="Sign in">
         
     </form>
-
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
