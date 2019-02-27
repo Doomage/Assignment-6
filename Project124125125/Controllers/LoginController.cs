@@ -15,11 +15,12 @@ namespace Project124125125.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult Login(User user)
+        public ActionResult Login(string Username,string Password)
         {
             UserManager manager = new UserManager();
-            var loggedInUser = manager.Login(user);
+            var loggedInUser = manager.Login(Username,Password);
 
             if (loggedInUser != null)
             {
