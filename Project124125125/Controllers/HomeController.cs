@@ -14,25 +14,5 @@ namespace Project124125125.Controllers
             User loggedUser = Session["user"] as User;
             return View(loggedUser);
         }
-        public ActionResult Complete()
-        {
-            User loggedUser = Session["user"] as User;
-            loggedUser.Role += 1;
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

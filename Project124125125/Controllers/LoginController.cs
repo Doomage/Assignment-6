@@ -15,6 +15,10 @@ namespace Project124125125.Controllers
         {
             return View();
         }
+        public ActionResult Wait()
+        {
+            return View();
+        }
 
         [HttpPost]
         [AllowAnonymous]

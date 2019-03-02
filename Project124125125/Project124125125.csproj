@@ -155,6 +155,7 @@
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManagerUsersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,9 +172,14 @@
     <Compile Include="Migrations\201902261654085_test3.Designer.cs">
       <DependentUpon>201902261654085_test3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903021439306_addedManagerUser.cs" />
+    <Compile Include="Migrations\201903021439306_addedManagerUser.Designer.cs">
+      <DependentUpon>201903021439306_addedManagerUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\ManagerUser.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -264,6 +270,12 @@
     <Content Include="Views\Documents\Details.cshtml" />
     <Content Include="Views\Documents\Edit.cshtml" />
     <Content Include="Views\Documents\Index.cshtml" />
+    <Content Include="Views\ManagerUsers\Create.cshtml" />
+    <Content Include="Views\ManagerUsers\Delete.cshtml" />
+    <Content Include="Views\ManagerUsers\Details.cshtml" />
+    <Content Include="Views\ManagerUsers\Edit.cshtml" />
+    <Content Include="Views\ManagerUsers\Index.cshtml" />
+    <Content Include="Views\Login\Wait.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902261654085_test3.resx">
       <DependentUpon>201902261654085_test3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903021439306_addedManagerUser.resx">
+      <DependentUpon>201903021439306_addedManagerUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project124125125.Models
 {
-    public class User
+    public class ManagerUser
     {
         
         public int Id { get; set; }
@@ -22,10 +22,13 @@ namespace Project124125125.Models
         [Required(ErrorMessage ="Role Required !")]
          public Roles Role { get; set; }
 
-
-        public IEnumerable<Document> Documents { get; set; }
-
     }
-
-    
+    public enum Roles
+    {
+        Analyst,
+        Architect,
+        Programmer,
+        Tester,
+        Manager
+    }
 }

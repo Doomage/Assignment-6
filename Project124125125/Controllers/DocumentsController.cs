@@ -31,7 +31,7 @@ namespace Project124125125.Controllers
         public ActionResult Complete(int id)
         {
             Document document = db.Documents.Where(x=> x.Id == id).FirstOrDefault();           
-            if(document.Role == Roles.Tester)
+            if(document.Role == Roles.Manager)
             {
                 return RedirectToAction("Index","Home");
             }

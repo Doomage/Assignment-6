@@ -22,5 +22,6 @@ namespace Project124125125.Models
 
          public virtual DbSet<User> Users { get; set; }
          public virtual DbSet<Document> Documents { get; set; }
+         public virtual DbSet<ManagerUser> ManagerUsers { get; set; }
     }
 }

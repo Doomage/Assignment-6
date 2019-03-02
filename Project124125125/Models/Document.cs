@@ -9,6 +9,7 @@ namespace Project124125125.Models
 {
     public class Document
     {
+        
         public int Id { get; set; }
         [Required]
         [Display(Name ="Text Title")]
