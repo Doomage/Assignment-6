@@ -3,31 +3,32 @@
 @{
     ViewBag.Title = "Create";
 }
-<br /><br /><br /><br /><br /><br /><br />
-<h2>Sign Up!</h2>
+<br /><br /><br /><br />
 <div class="container-fluid">
-    <form method="post" action="/ManagerUsers/Create">
-        @Html.AntiForgeryToken()
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control" placeholder="Enter Username" name="Username">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password">
-        </div>
-        <p>User Role</p>
-        <select class="custom-select" name="Role">
-            <option value="0">Analyst</option>
-            <option value="1">Arhitect</option>
-            <option value="2">Programmer</option>
-            <option value="3">Tester</option>
-            <option value="4">Manager</option>
-        </select>
-        <div>
-            <br />
-            <button type="submit" class="btn btn-primary">Sign up!</button>
-        </div>
-
-    </form>
+    <h2>Sign Up!</h2>
+        <form method="post" action="/ManagerUsers/Create" class="form-horizontal">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" placeholder="Enter Username" name="Username">
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password">
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+            <p>User Role</p>
+            <select class="custom-select text-center" name="Role">
+                <option value="0">Analyst</option>
+                <option value="1">Arhitect</option>
+                <option value="2">Programmer</option>
+                <option value="3">Tester</option>
+                <option value="4">Manager</option>
+            </select>
+            <div>
+                <br />
+                <button type="submit" class="btn btn-secondary">Sign up!</button>
+            </div>
+        </form>    
 </div>
