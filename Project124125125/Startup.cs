@@ -2,6 +2,7 @@
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using System.Linq;
 using System.Security.Claims;
 using System.Web.Helpers;
 using Project124125125.Models;
@@ -33,15 +34,17 @@ namespace Project124125125
         public void CreateManager()
         {
             DatabaseContext db = new DatabaseContext();
-            var user = new User();
 
-            if(!user.Role.Equals(Project124125125.Models.Roles.Manager))   
+            var user = db.Users.FirstOrDefault(x => x.Role == Roles.Manager);
+
+            if (user == null)   
             {
-                user.Username = "Manager";
-                user.Password = "Manager";
-                user.Role = Roles.Manager;
+                var Manager = new User();
+                Manager.Username = "Manager";
+                Manager.Password = "Manager";
+                Manager.Role = Roles.Manager;
 
-                db.Users.Add(user);
+                db.Users.Add(Manager);
                 db.SaveChanges();
             }
         }
