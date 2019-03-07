@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Project124125125.Models
 {
@@ -15,6 +16,7 @@ namespace Project124125125.Models
         [Display(Name ="Text Title")]
         public string Name { get;set;}
         [Required]
+        [AllowHtml]
         public string Text { get; set; }
 
         [Display(Name = "Role Working Document")]
