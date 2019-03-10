@@ -279,11 +279,6 @@
     <Content Include="Views\Documents\Details.cshtml" />
     <Content Include="Views\Documents\Edit.cshtml" />
     <Content Include="Views\Documents\Index.cshtml" />
-    <Content Include="Views\ManagerUsers\Create.cshtml" />
-    <Content Include="Views\ManagerUsers\Delete.cshtml" />
-    <Content Include="Views\ManagerUsers\Details.cshtml" />
-    <Content Include="Views\ManagerUsers\Edit.cshtml" />
-    <Content Include="Views\ManagerUsers\Index.cshtml" />
     <Content Include="Views\Login\Wait.cshtml" />
   </ItemGroup>
   <ItemGroup>
