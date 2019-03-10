@@ -16,7 +16,7 @@ namespace Project124125125.Models
         public User Login(string username,string password)
         {
             var loggedInUser = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
-            if (loggedInUser != null)
+            if (loggedInUser != null && loggedInUser.Accepted == true)
             {
                 var claims = new List<Claim>(new[]
                 {

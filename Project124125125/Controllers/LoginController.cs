@@ -27,10 +27,10 @@ namespace Project124125125.Controllers
             UserManager manager = new UserManager();
             var loggedInUser = manager.Login(Username,Password);
 
-            if (loggedInUser != null)
+            if (loggedInUser != null && loggedInUser.Accepted == true)
             {
                 Session["user"] = loggedInUser;
-                return View("Success", loggedInUser);
+                return RedirectToAction("index", "home");
             }
             else
             {

@@ -155,7 +155,6 @@
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ManagerUsersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,10 +175,21 @@
     <Compile Include="Migrations\201903021439306_addedManagerUser.Designer.cs">
       <DependentUpon>201903021439306_addedManagerUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903100045163_tester.cs" />
+    <Compile Include="Migrations\201903100045163_tester.Designer.cs">
+      <DependentUpon>201903100045163_tester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903100047388_testerdaw.cs" />
+    <Compile Include="Migrations\201903100047388_testerdaw.Designer.cs">
+      <DependentUpon>201903100047388_testerdaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903100132231_testerdawawd.cs" />
+    <Compile Include="Migrations\201903100132231_testerdawawd.Designer.cs">
+      <DependentUpon>201903100132231_testerdawawd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Document.cs" />
-    <Compile Include="Models\ManagerUser.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -250,7 +260,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Login\Success.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
@@ -303,6 +312,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903021439306_addedManagerUser.resx">
       <DependentUpon>201903021439306_addedManagerUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903100045163_tester.resx">
+      <DependentUpon>201903100045163_tester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903100047388_testerdaw.resx">
+      <DependentUpon>201903100047388_testerdaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903100132231_testerdawawd.resx">
+      <DependentUpon>201903100132231_testerdawawd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

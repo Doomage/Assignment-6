@@ -22,10 +22,25 @@ namespace Project124125125.Models
         [Required(ErrorMessage ="Role Required !")]
          public Roles Role { get; set; }
 
+        public bool Accepted { get; set; }
 
         public IEnumerable<Document> Documents { get; set; }
 
+        public User()
+        {
+            Accepted = false;
+        }
     }
 
-    
+    public enum Roles
+    {
+        Analyst,
+        Architect,
+        Programmer,
+        Tester,
+        Manager
+    }
+
+
+
 }

@@ -15,7 +15,7 @@ namespace Project124125125.Controllers
         
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.Users.ToList().Where(x=>x.Accepted==false));
         }
 
         // GET: Users/Details/5
@@ -45,13 +45,13 @@ namespace Project124125125.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Username,Password,Role")] User user)
+        public ActionResult Create(User user)
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(user);
+                db.Users.Add(user);              
                 db.SaveChanges();
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Wait","Login");
             }
 
             return View(user);
@@ -125,6 +125,15 @@ namespace Project124125125.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [Authorize(Roles = ("Manager"))]
+        public ActionResult Complete(int? id)
+        {
+            var user = db.Users.Where(x => x.Id == id).FirstOrDefault();
+            user.Accepted = true;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Users");
         }
     }
 }

@@ -43,6 +43,7 @@ namespace Project124125125
                 Manager.Username = "Manager";
                 Manager.Password = "Manager";
                 Manager.Role = Roles.Manager;
+                Manager.Accepted = true;
 
                 db.Users.Add(Manager);
                 db.SaveChanges();
